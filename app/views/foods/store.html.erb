@@ -1,0 +1,23 @@
+<div class="store">
+  <h1>廃棄済み</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>個数</th>
+        <th>期限</th>
+        <th>廃棄日</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@store.each do |store|%>
+        <tr>
+          <td><%=store.name%></td>
+          <td><%=store.count%></td>
+          <td><%=store.deadline.strftime("%Y-%m-%d %H:%M")%></td>
+          <td><%=store.created_at.strftime("%Y-%m-%d %H:%M")%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>

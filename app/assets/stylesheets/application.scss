@@ -1,0 +1,156 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *=require fullcalendar
+ *=require simple_calendar
+ *= require_tree .
+ *= require_self
+ */
+
+ *{
+   margin:0;
+   padding:0;
+ }
+
+
+ .entire{
+   margin: 0 auto;
+   max-width: 650px;
+   letter-spacing: 2px;
+ }
+
+body{
+  font-family:'Times New Roman',  "游ゴシック", sans-serif;
+  background: url("224.jpg") no-repeat center center/cover;
+  min-height:100vh
+}
+
+body h1 {
+  font-family:"ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+ header{
+   background: linear-gradient(45deg,#E41837 50%,#006991 50%);
+   height:12vh;
+ }
+header li{
+  font-family: 'M PLUS 1p', sans-serif;
+  position:relative;
+}
+
+ header nav a::after{
+  position:absolute;
+  bottom:4px;
+  left:0;
+  content:"";
+  width: 100%;
+  height: 2px;
+  background:#fff;
+  transform:scale(0,1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+
+header a:hover::after{
+  transform: scale(1,1)
+}
+
+.headerInner{
+   display: flex;
+   justify-content: space-between;
+ }
+
+ header ul,li{
+   list-style:none;
+ }
+
+
+ #title{
+   font-family: 'Anton', sans-serif;
+   font-size:30px;
+   font-weight:bold;
+   padding:30px;
+ }
+ .title{
+   text-decoration: none;
+ }
+
+ .title:link{
+   color:#000;
+ }
+
+ .title:visited{
+   color:#000;
+ }
+
+ #globalnav li{
+   float:right;
+   padding:5px;
+   margin-top:40px;
+   margin-right:50px;
+   font-weight: bold;
+
+ }
+
+ .login_var{
+   text-decoration:none;
+ }
+ .login_var:link{
+   color:#fff
+ }
+ .login_var:visited{
+   color:#fff;
+ }
+ .upper_list{
+   text-decoration: none;
+ }
+ .upper_list:link{
+   color:#fff;
+ }
+
+ .upper_list:visited{
+   color:#fff;
+ }
+
+ table{
+   background:#fff;
+   font-family: sans-serif;
+   box-shadow:0 0 20px #000 inset;
+ }
+
+ table th{
+   text-align: center;
+ }
+
+ .back{
+   font-weight:bold;
+   font-size:18px;
+   text-decoration: none;
+   text-decoration:underline;
+   position:absolute;
+   transform:translate(-15px,20px);
+ }
+
+
+
+ .back:link{
+   color:#000;
+ }
+
+ .back:visited{
+   color:#000;
+ }
+
+ .user_name{
+   font-size:20px;
+   font-weight:bold;
+   font-family: 'Anton', sans-serif;
+ }

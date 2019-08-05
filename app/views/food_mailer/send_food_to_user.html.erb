@@ -1,0 +1,46 @@
+<h3>今日の廃棄</h3>
+<%if @food_list.empty?%>
+
+  なし
+<%else%>
+  <table>
+    <thead>
+      <tr>
+        <th>食材名</th>
+        <th>個数</th>
+        <th>期限</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @food_list.each do |food|%>
+        <tr>
+          <td><%=food[0]%></td>
+          <td><%=food[1]%></td>
+          <td><%=food[2]%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+<%end%>
+
+<h3>今後の廃棄一覧</h3>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>食材名</th>
+      <th>個数</th>
+      <th>期限</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @expirations.each do |expiration|%>
+      <tr>
+        <td><%=expiration.name%></td>
+        <td><%=expiration.count%></td>
+        <td><%=expiration.deadline.strftime("%Y-%m-%d %H:%M")%></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>

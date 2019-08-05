@@ -1,0 +1,24 @@
+<div class="overdue">
+  <h1 id = "overdue_title"><i class="far fa-calendar-times"></i> 期限切れ廃棄</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>個数</th>
+        <th>期限</th>
+        <th>追加日</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@food_list.each do |food|%>
+      <tr>
+        <td><%=food[0]%></td>
+        <td><%=food[1]%></td>
+        <td><%=food[2]%></td>
+        <td><%=food[3]%></td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+ <%=link_to "戻る", "/", class:"back" %>
+</div>

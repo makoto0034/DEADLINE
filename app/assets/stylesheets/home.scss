@@ -1,0 +1,146 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.index{
+  text-align: center;
+  margin-top:80px;
+  position:relative;
+}
+
+.new{
+  text-align:center;
+  margin-top:80px;
+  position:relative;
+
+}
+
+.newInner{
+  margin-top:50px;
+}
+table,th,td{
+  border-collapse: collapse;
+  border:solid 1px #000;
+}
+th,td{
+  text-align: center;
+}
+table{
+  width:100%;
+  margin-top:30px;
+}
+
+.newbtn{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  color: #f52c4b;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #E41837, 0px 2px 0px #bf0f2a, 0px 3px 0px #d11935;
+  transition:300ms;
+  padding:10px;
+  transform:translate(-150px,50px);
+  position:absolute;
+}
+
+.select_food{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  color: #799dec;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #006991, 0px 2px 0px #00597a, 0px 3px 0px #006387;
+  transition:300ms;
+  padding:10px;
+  transform:translate(20px,50px);
+  position:absolute;
+}
+
+
+.listbtn:link{
+  color:#000;
+}
+
+.listbtn:visited{
+  color:#000;
+}
+
+.newbtn:active{
+  text-shadow: none;
+}
+.select_food:active{
+  text-shadow: none;
+}
+
+
+.listbtn{
+  text-decoration: none;
+}
+.listbtn:hover{
+  color: #E41837;
+}
+
+/*calendar*/
+#calendar{
+  margin-top:300px;
+}
+
+.calendar{
+  margin-top:150px;
+  margin-bottom:100px;
+}
+
+.simple-calendar{
+  background:#fff;
+}
+
+.calendar-heading{
+  padding-top:20px;
+}
+
+.calendar_select{
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.calendar_select:link{
+  color:#000;
+}
+
+.calendar_select{
+  color:#000;
+}
+
+.calendar-title{
+  font-weight:bold;
+}
+
+
+
+#product{
+  color:orangered;
+  font-weight:bold;
+}
+
+// new
+
+.createbtn{
+  background:#006991;
+  font-weight:bold;
+  width:100px;
+  height:30px;
+  margin-top:30px;
+  border:none;
+}
+.createbtn:hover{
+  background:#E41837;
+}
+
+
+.edit{
+  text-align: center;
+  position: relative;
+}
+
+.back{
+  position:absolute;
+  transform:translate(-15px,20px);
+}

@@ -1,0 +1,46 @@
+// Place all the styles related to the foods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//index
+.foods_new{
+  text-align: center;
+  margin-top:80px;
+}
+.foods_form{
+  margin-top:80px;
+}
+
+.pro_select{
+  margin-top:20px;
+}
+
+.cou_select{
+  margin-top:20px;
+}
+
+
+.back{
+  position:absolute;
+  transform:translate(-15px,20px);
+}
+
+
+//over
+.overdue{
+  margin-top:80px;
+  position: relative;
+}
+#overdue_title{
+  text-align: center;
+  margin-top:50px;
+}
+
+.overdue td {
+  color:red;
+}
+
+.overdue .back{
+  position:absolute;
+  transform:translate(300px,20px)
+}

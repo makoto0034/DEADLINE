@@ -1,0 +1,30 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.store_index{
+  margin-top:80px;
+  position: relative;
+}
+.store_index h1{
+  text-align: center;
+}
+
+.store_index .back{
+  position:absolute;
+  transform:translate(300px,20px);
+}
+.store_index .destroy_all{
+  float:right;
+  margin-top:5px;
+  font-weight:bold;
+  text-decoration: none;
+  border:solid 1px #000;
+}
+
+.store_index .destroy_all:visited{
+  color:orangered;
+}
+
+.store_index .destroy_all:link{
+  color:red;
+}

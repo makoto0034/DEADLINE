@@ -1,0 +1,26 @@
+<div class="index">
+  <h1><i class="fas fa-utensils"></i> 商品リスト</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>期限</th>
+        <th>追加日</th>
+        <th>編集</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%=food.name%></td>
+          <td><%=food.deadline%>日</td>
+          <td><%=food.created_at.strftime("%Y-%m-%d %H:%M")%></td>
+          <td><a class = "listbtn"href="home/<%=food.id%>/edit"><i class="fas fa-edit"></i></a></td>
+          <td><a class ="listbtn"href="/foods/<%=food.id%>/destroy"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+  <%=link_to"戻る","/",class:"back"%>
+</div>

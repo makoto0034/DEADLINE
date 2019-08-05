@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deadline</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/9322749711.js"></script>
+  </head>
+
+  <body>
+      <header>
+          <ul class="headerInner">
+            <li id ="title"><i class="fas fa-pizza-slice"></i> <%=link_to"Domino's Pizza Deadline","/",class:"title"%></li>
+            <nav id = 'globalnav'>
+              <ul>
+                <% if user_signed_in? %>
+                  <li><%=link_to"ログアウト",destroy_user_session_path,method: :delete,class:"login_var"%></li>
+                  <li class="user_name"><i class="fas fa-user-tie"></i> <%=current_user[:name]%></li>
+                  <li><%=link_to"廃棄報告","/store/index",class:"upper_list"%></li>
+                  <li><%=link_to"期限切れ報告","/foods/over",class:"upper_list"%></li>
+                  <li><%=link_to"商品リスト","/foods/index",class:"upper_list"%></li>
+                <% else %>
+                  <li><%=link_to"ログイン",new_user_session_path,class:"login_var"%></li>
+                  <li><%=link_to"新規登録",new_user_registration_path,class:"login_var"%></li>
+                <%end%>
+              </ul>
+            </nav>
+          </ul>
+      </header>
+      <div class="entire">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+  </body>
+</html>

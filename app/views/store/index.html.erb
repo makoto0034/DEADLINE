@@ -1,0 +1,27 @@
+<div class="store_index">
+<h1><i class="fas fa-dumpster"></i> 廃棄済み</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>個数</th>
+        <th>期限</th>
+        <th>廃棄日</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@store.each do |store|%>
+        <tr>
+          <td><%=store.name%></td>
+          <td><%=store.count%></td>
+          <td><%=store.deadline.strftime("%Y-%m-%d %H:%M")%></td>
+          <td><%=store.created_at.strftime("%Y-%m-%d %H:%M")%></td>
+          <td><a class ="listbtn"href="/store/<%=store.id%>/destroy"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+  <%= link_to '全削除', "/store/destroy_all",class:"destroy_all", method: :delete, data: { confirm: '一度削除したデータは戻せません。本当に削除しますか？' } %>
+  <%=link_to"戻る","/",class:"back"%>
+</div>

@@ -1,0 +1,80 @@
+.registration{
+  text-align: center;
+  margin-top:80px;
+  font-weight:bold;
+}
+.registration a{
+  text-decoration: none;
+}
+.registration a:link{
+  color:#000;
+}
+.registration a:visited{
+  color:#000;
+}
+
+.registration .register_btn{
+  background:#E41837;
+  border:none;
+  font-weight:bold;
+  width:80px;
+  height:30px;
+}
+
+.registration .register_btn:hover{
+  background:#006991;
+}
+.devise_edit{
+  text-align: center;
+  margin-top:80px;
+}
+.devise_edit a{
+  text-decoration: none;
+}
+.deivse_edit a:link{
+  color:#000;
+}
+.deivse_edit a:visited{
+  color:#000;
+}
+.login{
+  text-align: center;
+  margin-top:80px;
+  font-weight:bold;
+}
+.login a{
+  text-decoration: none;
+}
+.login a:link{
+  color:#000;
+}
+.login a:visited{
+  color:#000;
+}
+
+.login .actions{
+  padding:20px;
+}
+.login .login_btn{
+  background:#E41837;
+  border:none;
+  font-weight:bold;
+  width:80px;
+  height:30px;
+}
+.login .login_btn:hover{
+  background:#006991;
+}
+
+.under_link{
+  text-decoration: underline;
+  margin-top:5px;
+}
+.field{
+  padding:20px;
+}
+
+.devise_box{
+  height:20px;
+  width:200px;
+}

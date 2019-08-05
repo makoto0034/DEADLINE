@@ -1,0 +1,42 @@
+<div class="index">
+<h1><i class="fas fa-fish"></i> 解凍済み食材</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>名前</th>
+          <th>個数</th>
+          <th>廃棄期限</th>
+          <th>追加日</th>
+          <th>編集</th>
+          <th>廃棄</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%@expirations.each do |expiration|%>
+          <tr>
+            <td><%=expiration.name%></td>
+            <td><%=expiration.count%></td>
+            <td><%=expiration.deadline.strftime("%Y-%m-%d %H:%M")%></td>
+            <td><%=expiration.created_at.strftime("%Y-%m-%d %H:%M")%></td>
+            <td><a class = "listbtn"href="foods/<%=expiration.id%>/edit"><i class="fas fa-edit"></i></a></td>
+            <td><a class ="listbtn"href="home/<%=expiration.id%>/destroy"><i class="fas fa-trash-alt"></i></a></td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+
+
+    <%=link_to"食材追加","/home/new",class:"newbtn"%>
+    <%=link_to"新規解凍","/foods/new",class:"select_food"%>
+
+    <div class="calendar">
+      <%= month_calendar(attribute: :deadline, events: @expirations) do |date, expirations| %>
+        <%= date %>
+         <% expirations.each do |expiration| %>
+           <div>
+             <span id = "product"><%= expiration.name %></span>
+           </div>
+         <% end %>
+      <% end %>
+    </div>
+</div>

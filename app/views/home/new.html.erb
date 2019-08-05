@@ -1,0 +1,24 @@
+<div class="new">
+  <h1>商品追加</h1>
+  <div class="newInner">
+    <%=form_tag("/home/create") do%>
+      <h2>商品名</h2>
+      <input type="text" name="name">
+      <h2>期限</h2>
+      <select name="deadline">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+      </select>日
+      <p><input type="submit" value="追加" class="createbtn"></p>
+    <%end%>
+  </div>
+  <%=link_to("戻る","/",class:"back")%>
+</div>
