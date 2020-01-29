@@ -1,4 +1,6 @@
 require_relative 'boot'
+require 'selenium-webdriver'
+
 
 require 'rails/all'
 

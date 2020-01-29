@@ -12,7 +12,7 @@ class FoodMailer < ApplicationMailer
       end
     end
     mail(
-      to: "yutakasaitou@me.com",
+      to: "makotosaitou@me.com",
       subject: "今日の廃棄食材" #メールのタイトル,
        #宛先
     )
